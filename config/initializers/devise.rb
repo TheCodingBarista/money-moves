@@ -271,8 +271,10 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-   config.omniauth :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET'],
-   config.omniauth :spotify, ENV['SPOTIFY_KEY'], ENV['SPOTIFY_SECRET']
+   config.omniauth :twitter, Rails.application.credentials.dig(:twitter, :twitter_key),
+   Rails.application.credentials.dig(:twitter, :twitter_secret)
+   config.omniauth :spotify, Rails.application.credentials.dig(:spotify, :spotify_key),
+   Rails.application.credentials.dig(:spotify, :spotify_secret)
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

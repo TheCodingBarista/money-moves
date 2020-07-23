@@ -22,10 +22,13 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'bootstrap'
 gem 'devise'
+
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-spotify'
+gem 'activerecord-session_store'
 
 
 # Use Active Storage variant
