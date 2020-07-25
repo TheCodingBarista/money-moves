@@ -19,7 +19,9 @@ class OmniauthController < ApplicationController
         flash[:error] = "There was a problem signing you in through Twitter. Please register or try signing in later."
         redirect_to new_user_registration_url
       end
-  end
+    end
+
+  
 
     def failure
         redirect_to root_path
