@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   
   root to: "users#welcome"
 
+  get '/home', to: 'users#index'
   resources :articles, only: [:index, :show]
 end
