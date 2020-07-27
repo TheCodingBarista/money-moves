@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_24_050806) do
+ActiveRecord::Schema.define(version: 2020_07_26_042516) do
+
+  create_table "episodes", force: :cascade do |t|
+    t.string "name"
+    t.string "show"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "sessions", force: :cascade do |t|
     t.string "session_id", null: false
