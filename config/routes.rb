@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :news do
+    get 'feed/mint'
+  end
   namespace :spotify do
     get 'episodes/search'
   end

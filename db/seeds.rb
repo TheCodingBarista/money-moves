@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+mmm = Feed.create(name: "Mr. Money Mustache", url: "http://mrmoneymustache.com/feed")
+
+onl = Feed.create(name: "Our Next Life", url: "http://ournextlife.com/feed")
+
+#mad_fi = Feed.create(name: "Mad Fientist", url: "http://madfientist.com/articles")
+
+mint = Feed.create(name: "Mint Blog", url: "http://feeds.feedburner.com/MyMint")

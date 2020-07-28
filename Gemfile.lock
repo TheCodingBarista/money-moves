@@ -160,6 +160,7 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     netrc (0.11.0)
+    news-api (0.2.0)
     nio4r (2.5.2)
     nio4r (2.5.2-java)
     nokogiri (1.10.10)
@@ -359,6 +360,7 @@ DEPENDENCIES
   jquery-rails
   json
   listen (~> 3.2)
+  news-api
   omniauth
   omniauth-spotify
   omniauth-twitter
