@@ -22,12 +22,12 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'json'
+
 gem 'news-api'
 gem 'feedjira'
 gem 'httparty'
-
-gem 'rest-client'
-gem 'json'
+gem 'rspotify'
 
 gem 'bootstrap'
 gem 'jquery-rails'
