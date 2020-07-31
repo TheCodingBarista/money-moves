@@ -8,10 +8,10 @@
 
 #mmm = Feed.create(name: "Mr. Money Mustache", url: "http://mrmoneymustache.com/feed")
 
-#onl = Feed.create(name: "Our Next Life", url: "http://ournextlife.com/feed")
+mint = Feed.create(name: "Mint Blog", url: "http://feeds.feedburner.com/MyMint")
 
-#mad_fi = Feed.create(name: "Mad Fientist", url: "http://madfientist.com/feed")
+onl = Feed.create(name: "Our Next Life", url: "http://ournextlife.com/feed")
 
-#mint = Feed.create(name: "Mint Blog", url: "http://feeds.feedburner.com/MyMint")
+mad_fi = Feed.create(name: "Mad Fientist", url: "http://madfientist.com/feed")
 
-#rog = Feed.create(name: "Root of Good", url: "http://rootofgood.com/feed")
+gcc = Feed.create(name: "Go Curry Cracker", url: "http://gocurrycracker.com/feed")
