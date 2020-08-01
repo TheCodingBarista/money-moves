@@ -17,13 +17,14 @@ class Feed < ApplicationRecord
 
     def self.create_entries
         parse_feeds.each do |feed|
-            first_two = feed.entries[0..1]
-            first_two.each do |entry|
+            first_five = feed.entries[0..4]
+            first_five.each do |entry|
                 entry = Entry.create!(
                     :title => entry.title, 
                     :author => entry.author, 
                     :url => entry.url, 
                     :published => entry.published,
+                    :summary => entry.summary,
                     :content => entry.content
                 )
             end
