@@ -1,0 +1,14 @@
+<% @entries.sample(1).each do |entry| %>
+    <div class="col-md-9">
+        <p class="dark-grey-text">
+          <a> 
+            <strong> 
+                <%= link_to entry.title, entry.url, target: "_blank" %>
+            </strong>
+            </a>
+        </p>
+        <p> 
+            <%= sanitize entry.summary %>
+        </p>
+    </div>
+<% end %>

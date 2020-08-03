@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Material Design Bootstrap</title>
+  <title>Money Moves</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -18,16 +18,23 @@
 
 <body>
 
-  <!--Main Navigation-->
-  <header>
+<style type="text/css">
+   body { color: white;
+   background: #85bb65 !important; }
+</style>
 
+  <!-- Main Navigation-->
+  <header>
+    <style type="text/css">
+      nav-item { color: white !important; }
+    </style>
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
       <div class="container">
 
         <!-- Brand -->
-        <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/docs/jquery/" target="_blank">
-          <strong class="blue-text">MDB</strong>
+        <a class="navbar-brand waves-effect" href="https://github.com/TheCodingBarista/money-moves" target="_blank">
+          <strong class="blue-text">Money Moves</strong>
         </a>
 
         <!-- Collapse -->
@@ -62,19 +69,14 @@
           <!-- Right -->
           <ul class="navbar-nav nav-flex-icons">
             <li class="nav-item">
-              <a href="https://www.facebook.com/mdbootstrap" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-facebook-f"></i>
+              <a href="https://twitter.com/NotYourAvgMel" class="nav-link waves-effect" target="_blank">
+                <i class="fab fa-twitter"></i> NotYourAvgMel
               </a>
             </li>
             <li class="nav-item">
-              <a href="https://twitter.com/MDBootstrap" class="nav-link waves-effect" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link border border-light rounded waves-effect"
+              <a href="https://github.com/TheCodingBarista" class="nav-link border border-light rounded waves-effect"
                 target="_blank">
-                <i class="fab fa-github mr-2"></i>MDB GitHub
+                <i class="fab fa-github mr-2"></i>The Coding Barista
               </a>
             </li>
           </ul>
@@ -98,19 +100,20 @@
         <!-- Content -->
         <div class="card-body text-white text-center py-5 px-5 my-5">
 
+
+        <iframe src="https://giphy.com/embed/2WdOfxEu9ZcnWajI30" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/money-cardi-b-bodak-yellow-2WdOfxEu9ZcnWajI30">via GIPHY</a></p>
+
           <h1 class="mb-4">
-            <strong>Learn Bootstrap 4 with MDB</strong>
+            <strong>Welcome to Money Moves!</strong>
           </h1>
           <p>
-            <strong>Best & free guide of responsive web design</strong>
+            <strong>Find resources</strong>
           </p>
           <p class="mb-4">
-            <strong>The most comprehensive tutorial for the Bootstrap 4. Loved by over 500 000 users. Video and written
-              versions available. Create your own, stunning website.</strong>
+            <strong>Your new home for personal finance news, blog articles and podcast episodes</strong>
           </p>
-          <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start
-            free tutorial
-            <i class="fas fa-graduation-cap ml-2"></i>
+          <a target="_blank" href="https://github.com/TheCodingBarista/money-moves" class="btn btn-outline-white btn-lg">View this project on GitHub
+            <i class="fab fa-github mr-3"></i>
           </a>
 
         </div>
@@ -124,7 +127,7 @@
       <section class="wow fadeIn">
 
         <!--Section heading-->
-        <h2 class="h1 text-center my-5 font-weight-bold">Magazine NewsFeed</h2>
+        <h2 class="h1 text-center my-5 font-weight-bold">What We're Reading</h2>
 
         <!--Grid row-->
         <div class="row text-left">
@@ -134,7 +137,9 @@
 
             <!--Image-->
             <div class="view overlay rounded z-depth-1-half mb-3">
-              <img src="https://mdbootstrap.com/img/Photos/Others/images/77.jpg" class="img-fluid" alt="Sample post image">
+              <a href="https://www.amazon.com/Broke-Millennial-Scraping-Financial-Together/dp/0143130404/ref=sr_1_2?crid=3T1MOON6I69H0&dchild=1&keywords=broke+millennial&qid=1596407129&s=books&sprefix=broke+mill%2Caps%2C232&sr=1-2">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/41GkorDWQTL._SX331_BO1,204,203,200_.jpg" class="img-fluid" alt="Sample post image">
+              </a>
               <a>
                 <div class="mask rgba-white-slight"></div>
               </a>
@@ -142,26 +147,17 @@
 
             <!--Excerpt-->
             <div class="news-data">
-              <a href="" class="light-blue-text">
+              <a href="https://twitter.com/BrokeMillennial" class="light-blue-text">
                 <h6>
-                  <i class="fas fa-plane"></i>
-                  <strong> Travels</strong>
+                  <i class="fab fa-twitter mr-3"></i>
+                  <strong> Check out Broke Millennial on Twitter</strong>
                 </h6>
               </a>
-              <p>
-                <strong>
-                  <i class="far fa-clock"></i> 20/08/2018</strong>
-              </p>
             </div>
-            <h3>
-              <a>
-                <strong>This is title of the news</strong>
-              </a>
-            </h3>
-            <p> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
-              placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-            </p>
-
+            <br>
+            <div>
+               <%= render "featured", locals: {entries: @entries} %>
+          </div>
             <!--/Featured news-->
 
             <hr>
@@ -178,17 +174,7 @@
                   </a>
                 </div>
               </div>
-
-              <!--Excerpt-->
-              <div class="col-md-9">
-                <p class="dark-grey-text">
-                  <strong>19/08/2018</strong>
-                </p>
-                <a>Lorem ipsum dolor sit amet
-                  <i class="fas fa-angle-right float-right"></i>
-                </a>
-              </div>
-
+               <%= render "small", locals: {entries: @entries} %>
             </div>
             <!--/Small news-->
 
@@ -206,21 +192,11 @@
                   </a>
                 </div>
               </div>
-
-              <!--Excerpt-->
-              <div class="col-md-9">
-                <p class="dark-grey-text">
-                  <strong>18/08/2018</strong>
-                </p>
-                <a>Soluta nobis est eligendi
-                  <i class="fas fa-angle-right float-right"></i>
-                </a>
-              </div>
-
+               <%= render "small", locals: {entries: @entries} %>
             </div>
-            <!--/Small news-->
 
             <hr>
+            <!--/Small news-->
 
             <!--Small news-->
             <div class="row">
@@ -234,19 +210,11 @@
                   </a>
                 </div>
               </div>
-
-              <!--Excerpt-->
-              <div class="col-md-9">
-                <p class="dark-grey-text">
-                  <strong>17/08/2018</strong>
-                </p>
-                <a>Voluptatem accusantium doloremque
-                  <i class="fas fa-angle-right float-right"></i>
-                </a>
-              </div>
-
+               <%= render "small", locals: {entries: @entries} %>
             </div>
             <!--/Small news-->
+
+            <hr>
 
           </div>
           <!--Grid column-->
@@ -256,7 +224,9 @@
 
             <!--Image-->
             <div class="view overlay rounded z-depth-1-half mb-3">
-              <img src="https://mdbootstrap.com/img/Photos/Others/images/32.jpg" class="img-fluid" alt="Sample post image">
+              <a href="https://www.amazon.com/Simple-Path-Wealth-financial-independence/dp/1533667926/ref=sr_1_2?crid=2JUQ2EONBXDJ3&dchild=1&keywords=simple+path+to+wealth&qid=1596407213&s=books&sprefix=simple+%2Cstripbooks%2C220&sr=1-2">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/41oX+Lk2-ML._SX322_BO1,204,203,200_.jpg" class="img-fluid" alt="Sample post image">
+              </a>
               <a>
                 <div class="mask rgba-white-slight"></div>
               </a>
@@ -264,29 +234,20 @@
 
             <!--Excerpt-->
             <div class="news-data">
-              <a href="" class="light-blue-text">
+              <a href="https://twitter.com/JLCollinsNH" class="light-blue-text">
                 <h6>
-                  <i class="fas fa-plane"></i>
-                  <strong> Travels</strong>
+                  <i class="fab fa-twitter mr-3"></i>
+                  <strong> Learn more about JL Collins</strong>
                 </h6>
               </a>
-              <p>
-                <strong>
-                  <i class="far fa-clock"></i> 20/08/2018</strong>
-              </p>
+              <br>
             </div>
-            <h3>
-              <a>
-                <strong>This is title of the news</strong>
-              </a>
-            </h3>
-            <p> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
-              placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-            </p>
-
+            <div>
+              <%= render "featured", locals: {entries: @entries} %>
+            </div>
+          
+          <hr>
             <!--/Featured news-->
-
-            <hr>
 
             <!--Small news-->
             <div class="row">
@@ -300,21 +261,11 @@
                   </a>
                 </div>
               </div>
-
-              <!--Excerpt-->
-              <div class="col-md-9">
-                <p class="dark-grey-text">
-                  <strong>19/08/2018</strong>
-                </p>
-                <a>Lorem ipsum dolor sit amet
-                  <i class="fas fa-angle-right float-right"></i>
-                </a>
-              </div>
-
+              <%= render "small", locals: {entries: @entries} %>
             </div>
-            <!--/Small news-->
 
             <hr>
+            <!--/Small news-->
 
             <!--Small news-->
             <div class="row">
@@ -328,22 +279,11 @@
                   </a>
                 </div>
               </div>
-
-              <!--Excerpt-->
-              <div class="col-md-9">
-                <p class="dark-grey-text">
-                  <strong>18/08/2018</strong>
-                </p>
-                <a>Soluta nobis est eligendi
-                  <i class="fas fa-angle-right float-right"></i>
-                </a>
-              </div>
-
+               <%= render "small", locals: {entries: @entries} %>
             </div>
             <!--/Small news-->
 
             <hr>
-
             <!--Small news-->
             <div class="row">
               <div class="col-md-3">
@@ -356,21 +296,11 @@
                   </a>
                 </div>
               </div>
-
-              <!--Excerpt-->
-              <div class="col-md-9">
-                <p class="dark-grey-text">
-                  <strong>17/08/2018</strong>
-                </p>
-                <a>Voluptatem accusantium doloremque
-                  <i class="fas fa-angle-right float-right"></i>
-                </a>
-              </div>
-
+               <%= render "small", locals: {entries: @entries} %>
             </div>
             <!--/Small news-->
 
-          </div>
+            <hr>
           <!--Grid column-->
 
         </div>
@@ -393,9 +323,8 @@
         role="button">Download MDB
         <i class="fas fa-download ml-2"></i>
       </a>
-      <a class="btn btn-outline-white" href="https://mdbootstrap.com/education/bootstrap/" target="_blank" role="button">Start
-        free tutorial
-        <i class="fas fa-graduation-cap ml-2"></i>
+      <a class="btn btn-outline-white" href="https://github.com/TheCodingBarista/money-moves" target="_blank" role="button">View the code on GitHub
+        <i class="fab fa-github mr-3"></i>
       </a>
     </div>
     <!--/.Call to action-->
@@ -404,44 +333,25 @@
 
     <!-- Social icons -->
     <div class="pb-4">
-      <a href="https://www.facebook.com/mdbootstrap" target="_blank">
-        <i class="fab fa-facebook-f mr-3"></i>
-      </a>
 
-      <a href="https://twitter.com/MDBootstrap" target="_blank">
+
+      <a href="https://twitter.com/NotYourAvgMel" target="_blank">
         <i class="fab fa-twitter mr-3"></i>
       </a>
 
-      <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
-        <i class="fab fa-youtube mr-3"></i>
-      </a>
-
-      <a href="https://plus.google.com/u/0/b/107863090883699620484" target="_blank">
-        <i class="fab fa-google-plus-g mr-3"></i>
-      </a>
-
-      <a href="https://dribbble.com/mdbootstrap" target="_blank">
-        <i class="fab fa-dribbble mr-3"></i>
-      </a>
-
-      <a href="https://pinterest.com/mdbootstrap" target="_blank">
-        <i class="fab fa-pinterest mr-3"></i>
-      </a>
-
-      <a href="https://github.com/mdbootstrap/bootstrap-material-design" target="_blank">
+      <a href="https://github.com/TheCodingBarista" target="_blank">
         <i class="fab fa-github mr-3"></i>
       </a>
 
-      <a href="http://codepen.io/mdbootstrap/" target="_blank">
-        <i class="fab fa-codepen mr-3"></i>
-      </a>
     </div>
     <!-- Social icons -->
 
     <!--Copyright-->
     <div class="footer-copyright py-3">
-      © 2019 Copyright:
-      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>
+      <strong>Money Moves, 2020</strong><br><br>
+      brought to you by:
+      <br>
+      <a href="https://github.com/TheCodingBarista" target="_blank">The Coding Barista </a>
     </div>
     <!--/.Copyright-->
 

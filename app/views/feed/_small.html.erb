@@ -1,0 +1,29 @@
+
+<!--Image
+<div class="row">
+    <div class="col-md-3">
+
+    <div class="view overlay rounded z-depth-1">
+        <img src="https://mdbootstrap.com/img/Photos/Others/photo11.jpg" class="img-fluid" alt="Minor sample post image">
+        <a>
+            <div class="mask rgba-white-slight"></div>
+        </a>
+    </div>
+</div> -->
+
+<!--Excerpt-->
+
+<% @entries.sample(1).each do |entry| %>
+    <div class="col-md-9">
+        <p class="dark-grey-text">
+            <strong><%= published entry %></strong>
+            <br><br>
+            <a> 
+                <%= link_to entry.title, entry.url %>
+                <i class="fas fa-angle-right float-right"></i>
+            </a>
+        </p>
+    </div>
+    <hr>
+<% end %>
+

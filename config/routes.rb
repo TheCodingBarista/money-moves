@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   
   root to: "users#welcome"
 
-  #get '/home', to: 'users#index'
+  get '/home', to: 'feed#index'
+  get '/featured', to: 'feed#featured'
+  get '/small', to: 'feed#small'
+
   resources :articles, only: [:index, :show]
 end
