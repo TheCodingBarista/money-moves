@@ -5,6 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:twitter, :spotify]
 
+  has_many :stars, dependent: :destroy
+  has_many :entries, through: :stars
+
   def self.create_from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
@@ -19,4 +22,17 @@ class User < ApplicationRecord
   def email_required?
     false
   end
+
+  def star!(entry)
+    self.stars.create!(entry_id: entry.id)
+  end
+
+  def unstar!(entry)
+    star = self.stars.find_by_entry_id(entry.id)
+    star.destroy!
+  end
+
+  def star?(entry)
+    self.stars.find_by_entry_id(entry.id)
+
 end

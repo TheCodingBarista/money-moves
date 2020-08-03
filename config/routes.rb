@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :stars
   namespace :spotify do
     get '/episodes/search'
   end
@@ -10,6 +11,10 @@ Rails.application.routes.draw do
   get '/home', to: 'feed#index'
   get '/featured', to: 'feed#featured'
   get '/small', to: 'feed#small'
+
+  match 'star', to: 'stars#star', via: :entry
+  match 'unstar', to: 'stars#unstar', via: :delete
+
 
   resources :articles, only: [:index, :show]
 end
