@@ -34,5 +34,5 @@ class User < ApplicationRecord
 
   def star?(entry)
     self.stars.find_by_entry_id(entry.id)
-
+  end
 end

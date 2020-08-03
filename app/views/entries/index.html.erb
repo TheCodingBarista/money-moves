@@ -1,6 +1,3 @@
 <% @entries.each do |entry| %>
     <% entry.title %>
-    <%= div_for entry do %>
-        <%= render partial: "stars/button", locals: { entry: entry } %>
-    <% end%>
 <% end %>

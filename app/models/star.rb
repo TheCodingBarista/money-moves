@@ -1,4 +1,4 @@
-class Star < ApplicationRecordbelongs
+class Star < ApplicationRecord
     belongs_to :entry
     belongs_to :user
 

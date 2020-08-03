@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'json'
+gem 'record_tag_helper', '~> 1.0'
 
 gem 'news-api'
 gem 'feedjira'
@@ -37,7 +38,6 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-spotify'
 gem 'activerecord-session_store'
-
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
