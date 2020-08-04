@@ -32,8 +32,4 @@ class User < ApplicationRecord
     star = self.stars.find_by_entry_id(entry.id)
     star.destroy!
   end
-
-  #def star?(entry)
-  #  self.stars.find_by_entry_id(entry.id)
-  #end
 end

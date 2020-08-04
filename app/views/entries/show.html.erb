@@ -6,5 +6,9 @@
 <br>
 <%= sanitize @entry.content %>
 <br>
+<%= div_for @entry do %>
+    <%= render partial: "stars/button", locals: {entry: @entry} %>
+<% end %>
+<br>
 
 <h2 style="text-align:center"><%= link_to "All Articles", entries_path %></h2>
