@@ -21,8 +21,6 @@ class OmniauthController < ApplicationController
       end
     end
 
-  
-
     def failure
         redirect_to root_path
     end
