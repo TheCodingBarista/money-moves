@@ -1,7 +1,6 @@
-<h1> Articles </h1>
-<hr>
+<h1 style="text-align:center">Articles</h1>
+<ul>
 <% @entries.each do |entry| %>
-    <p>
-        <%= link_to entry.title, entry.url, target: "_blank" %>
-    </p>
+    <li><%= link_to entry.title, entry_path(entry) %></li>
 <% end %>
+</ul>  

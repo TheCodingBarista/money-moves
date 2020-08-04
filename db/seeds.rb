@@ -20,6 +20,6 @@ nerd = Feed.create(name: "Nerd Wallet Blog", url: "http://nerdwallet.com/blog/fe
 
 mint = Feed.create(name: "Mint Blog", url: "http://feeds.feedburner.com/MyMint")
 
-onl = Feed.create(name: "Our Next Life", url: "http://ournextlife.com/feed")
+#onl = Feed.create(name: "Our Next Life", url: "http://ournextlife.com/feed")
 
 gcc = Feed.create(name: "Go Curry Cracker", url: "http://gocurrycracker.com/feed")

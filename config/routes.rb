@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :stars
+  resources :entries
   namespace :spotify do
     get '/episodes/search'
   end
@@ -8,13 +9,10 @@ Rails.application.routes.draw do
   
   root to: "feed#index"
 
-  get '/entries', to: 'entries#index'
-
   delete 'logout', to: 'sessions#destroy'
-
 
   match 'star', to: 'stars#star', via: :entry
   match 'unstar', to: 'stars#unstar', via: :delete
 
-  resources :entries, only: [:index, :show]
+  #resources :entries, only: [:index, :show]
 end

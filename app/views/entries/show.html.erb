@@ -1,0 +1,10 @@
+<h3 style="text-align:left"><%= link_to "All Articles", entries_path %></h3>
+<br>
+<h1 style="text-align:center"><%= link_to @entry.title, @entry.url %></h1>
+<br>
+<h3 style="text-align:center"> by: <%= @entry.author %></h3>
+<br>
+<%= sanitize @entry.content %>
+<br>
+<%= link_to "Save this article", "#" %>
+<h1 style="text-align:center"><%= link_to "All Articles", entries_path %></h1>
