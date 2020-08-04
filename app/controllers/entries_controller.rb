@@ -6,4 +6,9 @@ class EntriesController < ApplicationController
   def show
     @entry = Entry.find(params[:id])
   end
+
+  private
+  def entry_params(*args)
+		params.require(:entry).permit(*args)
+	end
 end

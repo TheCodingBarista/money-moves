@@ -1,12 +1,13 @@
 class User < ApplicationRecord
+
+  has_many :stars, dependent: :destroy
+  has_many :entries, through: :stars
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:twitter, :spotify]
-
-  has_many :stars, dependent: :destroy
-  has_many :entries, through: :stars
 
   def self.create_from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
@@ -32,7 +33,7 @@ class User < ApplicationRecord
     star.destroy!
   end
 
-  def star?(entry)
-    self.stars.find_by_entry_id(entry.id)
-  end
+  #def star?(entry)
+  #  self.stars.find_by_entry_id(entry.id)
+  #end
 end

@@ -1,8 +1,10 @@
 class StarsController < ApplicationController
+    respond_to :js
+    
     def star
         @user = current_user
         @entry = Entry.find(params[:entry_id])
-        @entry.star!(@entry)
+        @user.star!(@entry)
     end
 
     def unstar

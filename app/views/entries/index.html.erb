@@ -1,6 +1,10 @@
 <h1 style="text-align:center">Articles</h1>
 <ul>
 <% @entries.each do |entry| %>
-    <li><%= link_to entry.title, entry_path(entry) %></li>
+    <%= link_to entry.title, entry_path(entry) %>
+    <br>
+<%= div_for entry do %>
+    <%= render partial: "stars/button", locals: {entry: entry} %>
+<% end %>
 <% end %>
 </ul>  

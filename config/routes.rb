@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :stars
   resources :entries
+
   namespace :spotify do
     get '/episodes/search'
   end
@@ -11,8 +11,8 @@ Rails.application.routes.draw do
 
   delete 'logout', to: 'sessions#destroy'
 
-  match 'star', to: 'stars#star', via: :entry
-  match 'unstar', to: 'stars#unstar', via: :delete
+  match '/star', to: 'stars#star', via: :post
+  match '/unstar', to: 'stars#unstar', via: :delete
 
   #resources :entries, only: [:index, :show]
 end
