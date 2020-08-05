@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :entries do
-    resources :notes
+    resources :notes, only: [:index, :show]
   end
 
   #namespace :spotify do
