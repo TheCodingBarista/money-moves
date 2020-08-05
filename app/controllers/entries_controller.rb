@@ -10,7 +10,7 @@ def index
   end
 
   private
-  def entry_params(*args)
-		params.require(:entry).permit(*args)
+  def entry_params
+		params.require(:entry).permit(:title, :content, :published, :url, :author, :summary)
 	end
 end

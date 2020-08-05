@@ -1,2 +1,2 @@
-class Feed <ApplicationRecord
+class Feed < ApplicationRecord
 end
