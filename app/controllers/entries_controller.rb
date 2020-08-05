@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
-def index
+  
+  def index
     @entries = Entry.all
   end
 

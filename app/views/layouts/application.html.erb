@@ -10,10 +10,102 @@
   
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-  
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
 
-  <body>
+<body>
+<style type="text/css">
+   body { color: white;
+   background: #85bb65 !important; }
+</style>
+
+  <!-- Main Navigation-->
+  <header>
+    <style type="text/css">
+      nav-item { color: white !important; }
+    </style>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+      <div class="container">
+
+        <!-- Brand -->
+        <a class="navbar-brand waves-effect" href="https://github.com/TheCodingBarista/money-moves" target="_blank">
+          <strong class="blue-text">Money Moves</strong>
+        </a>
+
+        <!-- Collapse -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <!-- Left -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link waves-effect" href="/">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="/register/sign_up">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="/login">Log In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="/entries">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="https://mdbootstrap.com/education/bootstrap/">Free tutorials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="/logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
   <%= yield %>
-  </body>
+  </header>
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      <strong>Money Moves, 2020</strong><br><br>
+      brought to you by:
+      <br>
+      <a href="https://github.com/TheCodingBarista" target="_blank">The Coding Barista </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+
+  </script>
+</body>
 </html>

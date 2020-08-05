@@ -6,16 +6,26 @@
 <br>
 <%= sanitize @entry.content %>
 <br>
+
 <%= div_for @entry do %>
     <%= render partial: "stars/button", locals: {entry: @entry} %>
 <% end %>
 <br>
-<h3>Notes (<%= @entry.notes.size %>)</h3>
-<br>
-    <% @entry.notes.each do |note| %>
-        <p><%= note.content %></p>
-        <hr>
-    <% end %>
-    <hr>
+
+<% if user_signed_in? %>
+    <h3>Notes (<%= @entry.notes.size %>)</h3>
+    <br>
+        <% @entry.notes.each do |note| %>
+            <% if note.user_id == current_user.id %>
+                <p>
+                    <%= note.content %>
+                    <%= link_to "Edit this Note", edit_entry_note_path(@entry, note) %>
+                </p>
+            <% end %>
+            <hr>
+        <% end %>
+<% end %>
+
 <%= render partial: 'notes/form' %>
+
 <h2 style="text-align:center"><%= link_to "All Articles", entries_path %></h2>

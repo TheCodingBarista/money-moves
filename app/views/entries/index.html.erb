@@ -3,8 +3,5 @@
 <% @entries.each do |entry| %>
     <%= link_to entry.title, entry_path(entry) %>
     <br>
-<%= div_for entry do %>
-    <%= render partial: "stars/button", locals: {entry: entry} %>
-<% end %>
 <% end %>
 </ul>  

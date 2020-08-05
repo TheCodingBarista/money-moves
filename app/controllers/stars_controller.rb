@@ -1,4 +1,6 @@
 class StarsController < ApplicationController
+    before_action :authenticate_user!, :except => [:index]
+    
     respond_to :js
     
     def star

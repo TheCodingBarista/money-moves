@@ -1,5 +1,7 @@
-<% unless current_user.stars.exists?(entry_id: entry.id) %>
-    <%= button_to "Star", star_path(entry_id: entry.id), remote: true %>
-<% else %>
-    <%= button_to "Unstar", unstar_path(entry_id: entry.id), remote: true %>
+<% if user_signed_in? %>
+    <% unless current_user.stars.exists?(entry_id: entry.id) %>
+        <%= button_to "Star", star_path(entry_id: entry.id), remote: true %>
+    <% else %>
+        <%= button_to "Unstar", unstar_path(entry_id: entry.id), remote: true %>
+    <% end %>
 <% end %>
