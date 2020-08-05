@@ -1,7 +1,8 @@
 class Entry < ApplicationRecord
     has_many :stars, dependent: :destroy
     has_many :users, through: :stars
-
+    has_many :notes, dependent: :destroy
+    
     require 'feedjira'
     require 'httparty'
 

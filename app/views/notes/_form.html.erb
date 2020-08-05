@@ -1,0 +1,9 @@
+<%= form_for [ @entry, @note ] do |f| %>
+  <p>
+    <%= f.label :content, "Add a Note to this Article" %><br/>
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.submit 'Create Note' %>
+  </p>
+<% end %>

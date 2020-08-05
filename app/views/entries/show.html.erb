@@ -10,5 +10,12 @@
     <%= render partial: "stars/button", locals: {entry: @entry} %>
 <% end %>
 <br>
-
+<h3>Notes (<%= @entry.notes.size %>)</h3>
+<br>
+    <% @entry.notes.each do |note| %>
+        <p><%= note.content %></p>
+        <hr>
+    <% end %>
+    <hr>
+<%= render partial: 'notes/form' %>
 <h2 style="text-align:center"><%= link_to "All Articles", entries_path %></h2>

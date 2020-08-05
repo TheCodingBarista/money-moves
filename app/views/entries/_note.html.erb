@@ -1,0 +1,5 @@
+<div>
+  <h4>Note for <%= note.entry.title %></h4>
+  <p class="note"><%= note.content %></p>
+<p>Created <%= distance_of_time_in_words(note.entry.created_at, note.created_at) %> later</p>
+</div>
