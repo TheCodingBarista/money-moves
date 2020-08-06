@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+<h1 style="text-align:center">My Saved Articles</h1>
+<br>
+    <% @user.stars.each do |star| %>
+        <% if star.user_id == current_user.id %>
+            <%= link_to star.entry.title, entry_path(star.entry) %> </li>
+        <% end %>
+    <% end %>
+<% end %>
