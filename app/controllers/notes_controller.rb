@@ -4,15 +4,19 @@ class NotesController < ApplicationController
     def new
         @note = Note.new(user_id: current_user.id, entry_id: params[:entry_id])
     end
+
+    def index
+        @entry = Entry.find(params[:entry_id])
+        @notes = @entry.notes
+    end
     
     def create
-        #@entry = Entry.find(params[:entry_id])
         @user = current_user
         @note = Note.new(note_params)
         @note.entry_id = params[:entry_id]
         @note.user_id = @user.id
         if @note.save
-            redirect_to entry_path(@note.entry)
+            redirect_to entry_notes_path(@note.entry)
         else
             render :new
         end

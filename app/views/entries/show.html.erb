@@ -11,20 +11,13 @@
     <%= render partial: "stars/button", locals: {entry: @entry} %>
 <% end %>
 <br>
-
-<% if user_signed_in? %>    <br>
-        <% @entry.notes.each do |note| %>
-            <% if note.user_id == current_user.id %>
-                <p>
-                    <%= note.content %>
-                    <br>
-                    <%= link_to "Edit this Note", edit_entry_note_path(@entry, note) %>
-                </p>
-            <% end %>
-            <hr>
-        <% end %>
+<% if user_signed_in? %>    
+<br>
+    <%= link_to "View My Notes", entry_notes_path(@entry) %>
+    <br><br>
+    <%= render partial: 'notes/form' %>
 <% end %>
 
-<%= render partial: 'notes/form' %>
+<br>
 
 <h2 style="text-align:center"><%= link_to "All Articles", entries_path %></h2>

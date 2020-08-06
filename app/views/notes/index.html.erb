@@ -1,0 +1,15 @@
+<% if user_signed_in? %>    
+    <br>
+        <% @entry.notes.each do |note| %>
+            <% if note.user_id == current_user.id %>
+                <p>
+                    <%= note.content %>
+                    <br>
+                    <%= link_to "Edit Note", edit_entry_note_path(@entry, note) %>
+                    <br>
+                    <%= button_to 'Delete Note', entry_note_path(@entry, note), method: :delete, data: {confirm: 'Are you sure?'} %>
+                </p>
+            <% end %>
+            <hr>
+        <% end %>
+<% end %>
