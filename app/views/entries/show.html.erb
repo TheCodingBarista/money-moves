@@ -19,6 +19,7 @@
             <% if note.user_id == current_user.id %>
                 <p>
                     <%= note.content %>
+                    <br>
                     <%= link_to "Edit this Note", edit_entry_note_path(@entry, note) %>
                 </p>
             <% end %>

@@ -1,4 +1,6 @@
 class NotesController < ApplicationController
+    before_action :authenticate_user!
+    
     def new
         @note = Note.new(user_id: current_user.id, entry_id: params[:entry_id])
     end
@@ -13,6 +15,22 @@ class NotesController < ApplicationController
             redirect_to entry_path(@note.entry)
         else
             render :new
+        end
+    end
+
+    def edit
+        @entry = Entry.find(params[:entry_id])
+        @note = @entry.notes.find(params[:id])    
+    end
+
+    def update
+        @entry = Entry.find(params[:entry_id])
+        @note = @entry.notes.find(params[:id])
+
+        if @note.update(note_params)
+            redirect_to entry_path(@note.entry)
+        else
+            render 'edit'
         end
     end
 
