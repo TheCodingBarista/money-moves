@@ -5,7 +5,7 @@ class Entry < ApplicationRecord
     has_many :users, through: :notes
     validates_associated :notes
 
-    scope :most_stars, -> { order(stars_count: :desc).limit(1) }
+    scope :most_stars, -> { order(stars_count: :desc).limit(3) }
     
     require 'feedjira'
     require 'httparty'
