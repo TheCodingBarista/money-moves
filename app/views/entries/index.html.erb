@@ -1,7 +1,8 @@
 <h1 style="text-align:center">Articles</h1>
 <ul>
 <% @entries.each do |entry| %>
-    <%= link_to entry.title, entry_path(entry) %>
+    <%= link_to entry.title, entry_path(entry) %> - 
+    <%= entry.stars.size %> stars
     <br>
 <% end %>
 </ul>  
