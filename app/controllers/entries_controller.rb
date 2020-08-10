@@ -4,6 +4,10 @@ class EntriesController < ApplicationController
     @entries = Entry.all
   end
 
+  def most_stars
+    @entries = Entry.most_stars
+  end
+  
   def show
     @entry = Entry.find(params[:id])
     @note = Note.new

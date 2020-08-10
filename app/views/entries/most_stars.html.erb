@@ -1,0 +1,7 @@
+<h1 style="text-align:center">Most Favorited Articles</h1>
+<br>
+
+<% @entries.each do |entry| %>
+    <%= link_to entry.title, entry_path(entry) %> - <%= pluralize(entry.stars_count, 'star') %>
+    <br><br>
+<% end %>

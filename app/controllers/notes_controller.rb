@@ -29,12 +29,13 @@ class NotesController < ApplicationController
 
     def update
         @entry = Entry.find(params[:entry_id])
+        @user = current_user
         @note = @entry.notes.find(params[:id])
-
-        if @note.update(note_params)
+        if @note.user_id == @user.id
+            @note.update(note_params)
             redirect_to entry_path(@note.entry)
         else
-            render 'edit'
+            redirect_to entries_path
         end
     end
 

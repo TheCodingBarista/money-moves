@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-resources :users, only: [:show]
+  get '/most_stars', to: 'entries#most_stars'
+
+  resources :users, only: [:show]
 
   resources :entries do
     resources :notes
@@ -17,4 +19,5 @@ resources :users, only: [:show]
 
   match '/star', to: 'stars#star', via: :post
   match '/unstar', to: 'stars#unstar', via: :delete
+
 end

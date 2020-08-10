@@ -4,7 +4,7 @@
             <strong><%= published entry %></strong>
             <br><br>
             <a> 
-                <%= link_to entry.title, entry.url %>
+                <%= link_to entry.title, entry_path(entry) %>
                 <i class="fas fa-angle-right float-right"></i>
             </a>
         </p>
