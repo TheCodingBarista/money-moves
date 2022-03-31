@@ -160,8 +160,8 @@ GEM
     multipart-post (2.1.1)
     netrc (0.11.0)
     news-api (0.2.0)
-    nio4r (2.5.2)
-    nio4r (2.5.2-java)
+    nio4r (2.5.8)
+    nio4r (2.5.8-java)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     nokogiri (1.10.10-java)
@@ -200,9 +200,9 @@ GEM
       method_source (~> 1.0)
       spoon (~> 0.0)
     public_suffix (3.1.1)
-    puma (4.3.5)
+    puma (4.3.12)
       nio4r (~> 2.0)
-    puma (4.3.5-java)
+    puma (4.3.12-java)
       nio4r (~> 2.0)
     rack (2.2.3)
     rack-proxy (0.6.5)
@@ -366,7 +366,7 @@ DEPENDENCIES
   omniauth-spotify
   omniauth-twitter
   pry
-  puma (~> 4.1)
+  puma (~> 4.3)
   rails (~> 6.0.3, >= 6.0.3.2)
   record_tag_helper (~> 1.0)
   rspotify
